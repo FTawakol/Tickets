@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Friends</h1>
+<table class="table table-striped">
+
+<div id="friends"> 
+   <tr>
+   <th>Time</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Link</th>
+  </tr>
+  <% @friends.each do |friend| %>
+ 
+    <tr>
+      <td><%= friend.created_at.strftime('%Y-%m-%d') %> </td>
+      <td><%= friend.First_name %> </td>
+      <td><%= friend.Last_name %></td>
+      <td> <%= friend.Phone %> </td>
+      <td> <%= friend.Email %> </td>
+      <td><%= link_to "Show this friend", friend, class:"btn btn-secondary" %></td>
+    </tr>
+  <% end %>
+  </table>
+ <% if user_signed_in? %>
+   <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+  <% else %>
+  <%end%>
+</div>
+

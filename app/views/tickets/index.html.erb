@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tickets</h1>
+<table class="table table-striped">
+<div id="tickets">
+   <tr>
+   <th>Time</th>
+    <th>User</th>
+    <th>PC</th>
+    <th>Type</th>
+    <th>blabla</th>
+    <th>Link</th>
+  </tr>
+  <% @tickets.each do |ticket| %>
+    <tr>
+      <td><%= ticket.created_at.strftime('%Y-%m-%d') %> </td>
+      <td><%= ticket.User %> </td>
+      <td><%= ticket.PC %></td>
+      <td> <%= ticket.Type %> </td>
+      <td> <%= ticket.Description %> </td>
+      <td> <%= link_to "Show this ticket", ticket, class:"btn btn-secondary" %></td>
+    </tr>
+  <% end %>
+  </table>
+  <%= link_to "New ticket", new_ticket_path, class:"btn btn-secondary" %>
+</div>
+
+
