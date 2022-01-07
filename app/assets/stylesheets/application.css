@@ -20,3 +20,21 @@
 .notice{
     background-color: orange;
 }
+.mr-font-size-base {
+    font-size: 14px!important;
+    line-height: 1.428571429!important;
+}
+.bg-blue {
+    background-color: #4abdd2!important;
+}
+.mr-banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+.hp2{
+    background-color:paleturquoise;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
