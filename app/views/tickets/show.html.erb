@@ -1,12 +1,15 @@
+<div class="row flex-container" style="background-color:#0052cc; padding-right:10%  ; padding-left:10%; padding-top:5%; padding-bottom:20%"> 
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @ticket %>
 
-<div>
+<div style="color:white">
   <%= link_to "Edit this ticket", edit_ticket_path(@ticket), class:"btn btn-secondary" %> |
   <%= link_to "Back to tickets", tickets_path, class:"btn btn-secondary" %>
   </div>
   <br>
   <div>
   <%= button_to "Destroy this ticket", @ticket, method: :delete, class:"btn btn-warning" %>
+</div>
 </div>
