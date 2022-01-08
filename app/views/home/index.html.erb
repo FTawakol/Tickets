@@ -1,10 +1,39 @@
 
-    <div class="hp2">
-    <h1>Home Page</h1>
-    </div>
+<div class="row flex-container" style="background-color:#0052cc; padding-right:10%  ; padding-left:10%; padding-top:5%; padding-bottom:20%"> 
+<div class="column column-md-5 column-lg-4 column-lg-offset-1 vertical-middle text-n0 s0 between"> 
+<div class="component component--heading"> 
+<h5 class="heading" style="color:white; font-size: 3rem;"> Welcome to Our Local Customer Service Ticketing Service </h5> 
+</div> 
+<% if user_signed_in? %>
+<h1 style="color:white; font-size: 1.5rem;">Dear
+<%= current_user.email %>,
+</h1>
+<h1 style="color:white; font-size: 1.5rem;">Don't You Dare Make Fun of My APP</h1>
+<br>
+<div>
+  <tr>
+  <%= link_to 'View Open Tickets', tickets_path, class:"btn btn-secondary" %> |
+  </tr>
+  <%= link_to 'Open New Ticket', new_ticket_path, class:"btn btn-secondary" %>
+</div>
+<% else %>
 <div>
   <tr>
   <%= link_to 'Sign In', new_user_session_path, class:"btn btn-secondary" %> |
   </tr>
   <%= link_to 'Sign Up', new_user_registration_path, class:"btn btn-secondary" %>
 </div>
+<%end%>
+<div class="component component--heading" style="padding-top:8px;"> 
+<h5 class="heading" style="color:white; font-size: 2rem;"> In this service you can: </h5> 
+</div> 
+<div class="component component--list-block"> 
+<ul> <li class="featured"> <p>Create New Tickets</p> </li>
+ <li class="featured"> Check list of open Tickets </li> 
+ <li class="featured"> <p>Analyse Old Tickets</p> </li> 
+ <li class="featured"> Community Support </li>
+  <li class="featured"> Zero obligation, no credit card needed </li> 
+
+
+    </span></div></div></div></div> 
+

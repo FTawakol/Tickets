@@ -3,8 +3,10 @@
 <%= render @ticket %>
 
 <div>
-  <%= link_to "Edit this ticket", edit_ticket_path(@ticket) %> |
-  <%= link_to "Back to tickets", tickets_path %>
-
-  <%= button_to "Destroy this ticket", @ticket, method: :delete %>
+  <%= link_to "Edit this ticket", edit_ticket_path(@ticket), class:"btn btn-secondary" %> |
+  <%= link_to "Back to tickets", tickets_path, class:"btn btn-secondary" %>
+  </div>
+  <br>
+  <div>
+  <%= button_to "Destroy this ticket", @ticket, method: :delete, class:"btn btn-warning" %>
 </div>
