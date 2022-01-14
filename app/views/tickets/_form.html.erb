@@ -12,30 +12,34 @@
   <% end %>
 
   <div>
-    <%= form.label :User, style: "display: block; color:white;" %>
-    <%= form.text_field :User %>
+    <%= form.label :User, style: "display: block; color:Orange;" %>
+    <%= form.text_field :User, value: current_user.email%>
   </div>
 
   <div>
-    <%= form.label :Date, style: "display: block; color:white;" %>
-    <%= form.text_field :Date %>
+    <%= form.label :Date, style: "display: block; color:Orange;" %>
+    <%= form.text_field :Date, value: Time.now.strftime("%Y-%d-%m %H:%M:%S") %>
   </div>
 
   <div>
-    <%= form.label :PC, style: "display: block; color:white;" %>
-    <%= form.text_field :PC %>
+    <%= form.label :Product, style: "display: block; color:Orange;" %>
+    <%= form.select :PC, [['Select', nil], ['Steel','Steel'],['HDG', 'HDG']] %>
   </div>
 
   <div>
-    <%= form.label :Type, style: "display: block; color:white;" %>
-    <%= form.text_field :Type %>
-  </div>
+    <%= form.label :Type, style: "display: block; color:Orange;" %>
+    <%= form.select :Type, [['Select', nil], ['QC','QC'],['Warehouse', 'Warehouse']] %>  </div>
 
   <div>
-    <%= form.label :Description, style: "display: block; color:white;" %>
+    <%= form.label :Description, style: "display: block; color:Orange;" %> 
     <%= form.text_field :Description %>
   </div>
 
+  <div>
+    <%= form.text_field :user_id, id: :ticket_user_id, value: current_user.id, type: :hidden %>
+  </div>
+  
+</br>
   <div>
     <%= form.submit %>
   </div>
