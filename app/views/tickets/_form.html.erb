@@ -12,23 +12,23 @@
   <% end %>
 
   <div>
-    <%= form.label :User, style: "display: block; color:Orange;" %>
-    <%= form.text_field :User, value: current_user.email%>
+    <%= form.label :Name, style: "display: block; color:Orange;" %>
+    <%= form.text_field :Name %>
   </div>
 
   <div>
-    <%= form.label :Date, style: "display: block; color:Orange;" %>
-    <%= form.text_field :Date, value: Time.now.strftime("%Y-%d-%m %H:%M:%S") %>
+    <%= form.label :'Year of Birth', style: "display: block; color:Orange;" %>
+<%= form.select :year, (2000..Time.now.year).to_a, :include_blank => {:year => "Select year"} %>
   </div>
 
   <div>
     <%= form.label :Product, style: "display: block; color:Orange;" %>
-    <%= form.select :PC, [['Select', nil], ['Steel','Steel'],['HDG', 'HDG']] %>
+    <%= form.select :PC, [['Select', nil], ['Expert','Expert'],['Advanced', 'Advanced'],['Women', 'Women'],['Under 16', 'Unde 16']] %>
   </div>
 
   <div>
     <%= form.label :Type, style: "display: block; color:Orange;" %>
-    <%= form.select :Type, [['Select', nil], ['QC','QC'],['Warehouse', 'Warehouse']] %>  </div>
+    <%= form.select :Type, [['Select', nil], ['Early Bird Registration [400 EGP]','early']] %>  </div>
 
   <div>
     <%= form.label :Description, style: "display: block; color:Orange;" %> 

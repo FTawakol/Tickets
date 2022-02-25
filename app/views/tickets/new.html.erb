@@ -1,11 +1,12 @@
 <div class="row flex-container" style="background-color:#0052cc; padding-right:10%  ; padding-left:10%; padding-top:5%; padding-bottom:20%"> 
 
-<h1 style="color:white;">New ticket</h1>
+<h1 style="color:white;size:2;">  Registration Details</h1>
 
+<h1 style="color:white;font-size:2rem;"> <%= link_to image_tag("date.png", height: 30)%>   March 24th</h1>
+<h1 style="color:white;font-size:2rem;"> <%= link_to image_tag("location.png", height: 30)%>Dahab, Baby Bay</h1>
 <%= render "form", ticket: @ticket %>
 
 <br>
-</br>
 <div style="color:white;">
   <%= link_to "Back to tickets", tickets_path %>
 </div>
