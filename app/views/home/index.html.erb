@@ -1,27 +1,48 @@
 
-<div >
-  <img class="full-width" <%=image_tag("2.png")%>>
+<div>
+  <img class="full-width" <%=image_tag("2.png")%>
 </div>
-
-
-<div class="row flex-container" style="background-color:lightgrey; padding-right:10%  ; padding-left:10%; padding-top:5%; padding-bottom:20%"> 
+<div class="row flex-container" style="background-color:white; padding-right:10%  ; padding-left:10%; padding-top:5%; padding-bottom:20%"> 
 <div class="column column-md-5 column-lg-4 column-lg-offset-1 vertical-middle text-n0 s0 between"> 
 <div class="component component--heading"> 
 
 
-<h5 class="heading" style="color:white; font-size: 3rem;"> Welcome To KiteMania Riders' Registration Portal </h5> 
+<h5 class="heading" style="color:#0a7ac2; font-size: 3rem;"> Welcome To KiteMania Riders' Registration Portal </h5> 
 </div> 
+<%= button_to "Login with Facebook", user_facebook_omniauth_authorize_path, class:"btn btn-secondary" %>
+
 <% if user_signed_in? %>
-<h1 style="color:white; font-size: 1.5rem;">Dear
+<h1 style="color:#0a7ac2; font-size: 1.5rem;">Dear
 <%= current_user.email %>,
 </h1>
 <h1 style="color:Orange; font-size: 1.5rem;">YOU HAVE TO BUY ALI V-BUCKS</h1>
 <br>
 <div>
+<div class="component component--heading" style="padding-top:8px;"> 
+<h5 class="heading" style="color:#0a7ac2; font-size: 2rem;"> Please Choose your Descipline </h5> 
+</div> 
+
   <tr>
-  <%= link_to 'View Open Tickets', tickets_path, class:"btn btn-secondary" %> |
+  <%= link_to 'Big Air [Expert]', "https://accept.paymobsolutions.com/standalone?ref=p_3ap", class:"btn btn-secondary" %> 
   </tr>
-  <%= link_to 'Open New Ticket', new_ticket_path, class:"btn btn-secondary" %>
+  <br/>
+  
+   <br/>
+  <tr>
+  <%= link_to 'Big Air [Advanced]', tickets_path, class:"btn btn-secondary" %> 
+  </tr>
+   <br/>
+  
+   <br/>
+  <tr>
+  <%= link_to 'Big Air [Females]', tickets_path, class:"btn btn-secondary" %> 
+  </tr>
+   <br/>
+  
+   <br/>
+    <tr>
+  <%= link_to 'Big Air [Under 16]', tickets_path, class:"btn btn-secondary" %> 
+  </tr>
 </div>
 <% else %>
 <div>
@@ -31,15 +52,6 @@
   <%= link_to 'Sign Up', new_user_registration_path, class:"btn btn-secondary" %>
 </div>
 <%end%>
-<div class="component component--heading" style="padding-top:8px;"> 
-<h5 class="heading" style="color:white; font-size: 2rem;"> Please Choose your Descipline </h5> 
-</div> 
-<div class="component component--list-block"> 
-<ul> <li class="featured"> <p>Create New Tickets</p> </li>
- <li class="featured"> Check list of open Tickets </li> 
- <li class="featured"> <p>Analyse Old Tickets</p> </li> 
- <li class="featured">  Support </li>
-
 
     </span></div></div></div></div> 
 
