@@ -64,3 +64,15 @@
     font-weight: 500;
     font-family: sans-serif;
 }
+.full-width {
+    width: 100%;
+  }
+.s500 {
+    height:500px;
+  }
+  .pink {
+    background: pink;
+  }
+  .blue {
+    background: steelblue;
+  }
